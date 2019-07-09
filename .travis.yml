@@ -2,9 +2,9 @@ language: r
 cache: packages
 
 r:
-  - oldrel
+#  - oldrel
   - release
-  - devel
+#  - devel
 
 notifications:
   email:
@@ -23,3 +23,8 @@ branches:
     - master
 
 # this is a comment
+before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+  deploy:
+    provider: script
+    script: Rscript -e 'pkgdown::deploy_site_github()'
+    skip_cleanup: true
