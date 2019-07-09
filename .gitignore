@@ -39,6 +39,9 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
+# dont commit docs
+docs/
+
 ##############################
 ## Latex ignores from github
 ##############################

@@ -5,3 +5,21 @@ r:
   - oldrel
   - release
   - devel
+
+notifications:
+  email:
+    recipients:
+      - dperepolkin@gmail.com
+    on_success: change
+    on_failure: change
+
+git:
+  depth: false
+
+# or branches:
+#        except:
+branches:
+  only:
+    - master
+
+# this is a comment
