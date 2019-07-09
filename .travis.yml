@@ -18,13 +18,13 @@ git:
 
 # or branches:
 #        except:
-branches:
-  only:
-    - master
+#branches:
+#  only:
+#    - master
 
 # this is a comment
 before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
-  deploy:
+deploy:
     provider: script
     script: Rscript -e 'pkgdown::deploy_site_github()'
     skip_cleanup: true
